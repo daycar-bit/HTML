@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>formulario basico</title>
+</head>
+<body>
+    <h1>formulario basico</h1>
+    <form method="post">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aqui" required><br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" placeholder="Escribe tu correo aqui" required><br><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{6,12}$" placeholder="Crea una contraseña" minlength="6" maxlength="12" required><br><br>
+
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label><br><br>
+
+        <p>Intereses : </p>
+        <input type="checkbox" id="Musica" name="intereses" value="Musica">
+        <label for="Musica">Música</label><br>
+        <input type="checkbox" id="Deporte" name="Intereses" value="Deporte">
+        <label for="Deporte">Deporte</label><br><br>
+        
+
+        <label for="pais">Pais:</label>
+        <input type="text" id="Pais" name="Pais" placeholder="ingresa el pais donde reside" required ><br><br>
+        <h3>Comentarios</h3>
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="ingresa un comentario" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>
