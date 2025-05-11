@@ -2,41 +2,75 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>formulario basico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Completo</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>formulario basico</h1>
-    <form method="post">
-        
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aqui" required><br><br>
 
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" name="correo" placeholder="Ejemplo@gmail.com" required><br><br>
+    <header>
+        <h1>Ejercicios con Java</h1>
+    </header>
 
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{6,12}$" placeholder="Crea una contraseña con caracteres especiales" minlength="6" maxlength="12" required><br><br>
+    <main>
+        <section class="container" id="seccion-edad">
+            <h2>Calculadora de Edad</h2>
+            <form id="edadForm">
+                <label for="birthYear">Año de nacimiento:</label>
+                <input type="number" id="birthYear" placeholder="Año de nacimiento" required>
+                <button type="submit">Calcular Edad</button>
+            </form>
+            <p id="resultadoEdad"></p>
+        </section>
 
-        <input type="radio" id="masculino" name="genero" value="masculino">
-        <label for="masculino">Masculino</label><br>
-        <input type="radio" id="femenino" name="genero" value="femenino">
-        <label for="femenino">Femenino</label><br><br>
+        <section class="container" id="seccion-mayusculas">
+            <h2>Convertidor de Texto a Mayúsculas</h2>
+            <textarea id="textoEntrada" placeholder="Escribe tu texto aquí..." oninput="ajustarAltura()"></textarea>
+            <button onclick="convertirAMayusculas()">Convertir</button>
+            <div id="resultadoTexto"></div>
+        </section>
 
-        <p>Intereses : </p>
-        <input type="checkbox" id="Musica" name="intereses" value="Musica">
-        <label for="Musica">Música</label><br>
-        <input type="checkbox" id="Deporte" name="Intereses" value="Deporte">
-        <label for="Deporte">Deporte</label><br><br>
-        
+        <section class="container" id="seccion-contador">
+            <h2>Contador de Clics</h2>
+            <button id="botonContador">Haz clic aquí</button>
+            <p id="contadorClicks">Clicks: 0</p>
+        </section>
+    </main>
 
-        <label for="pais">Pais:</label>
-        <input type="text" id="Pais" name="Pais" placeholder="ingresa el pais donde reside" required ><br><br>
-        <h3>Comentarios</h3>
-        
-        <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="ingresa un comentario" required></textarea><br><br>
+    <script>
+        // Calculadora de Edad
+        document.getElementById('edadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const yearNacimiento = document.getElementById('birthYear').value;
+            if (yearNacimiento && !isNaN(yearNacimiento)) {
+                const yearActual = new Date().getFullYear();
+                const edad = yearActual - yearNacimiento;
+                document.getElementById('resultadoEdad').innerHTML = `Tienes ${edad} años.`;
+            } else {
+                document.getElementById('resultadoEdad').innerHTML = 'Por favor, ingresa un año válido.';
+            }
+        });
 
-        <input type="submit" value="Enviar">
+        // Convertidor de Texto a Mayúsculas
+        function ajustarAltura() {
+            const textoArea = document.getElementById('textoEntrada');
+            textoArea.style.height = 'auto';
+            textoArea.style.height = textoArea.scrollHeight + 'px';
+        }
 
-    </form>
+        function convertirAMayusculas() {
+            const texto = document.getElementById('textoEntrada').value;
+            const textoMayusculas = texto.toUpperCase();
+            document.getElementById('resultadoTexto').innerText = textoMayusculas;
+        }
+
+        // Contador de Clics
+        let contador = 0;
+        document.getElementById('botonContador').addEventListener('click', function() {
+            contador++;
+            document.getElementById('contadorClicks').textContent = `Clicks: ${contador}`;
+        });
+    </script>
+
 </body>
 </html>
