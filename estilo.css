@@ -1,0 +1,65 @@
+body {
+    background-color: gray;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px black rgba(0,0,0,0,1.);
+    text-align: center;
+    max-width: 320px;
+
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+    
+h1 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+h2 {
+    margin: 0.25rem 0;
+    color:  #444  ;
+    font-size: 1rem 0;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 1rem 0;
+}
+
+.social a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 1rem ;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none ;
+    color: white;
+    border-radius: 6 px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b30000;
+}
