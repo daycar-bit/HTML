@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Señal Colombia Premium</title>
+    <link rel="stylesheet" href="estilonetflix.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Se%C3%B1al_Colombia_logo.svg/1920px-Se%C3%B1al_Colombia_logo.svg.png" alt="Señal Colombia Premium">
+        </div>
+        <nav class="main-nav">
+            <a href="#">Español</a>
+            <a href="#">Iniciar sesión</a>
+        </nav>
+        <div class="content">
+            <h1>Películas, series ilimitadas y mucho más</h1>
+            <p>A partir de $2000 o con el cupo Brilla. Cancela cuando se te pegue la gana.</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Email" required>
+                <input type="submit" value="Comenzar">
+            </form>
+        </div>
+    </header>
+
+    <section>
+        <h2>Tendencias</h2>
+        <section class="carrusel">
+            <div class="slider">
+                <div class="slide">
+                    <img src="http://mrtrance.com/wp-content/uploads/2012/02/mr_trance_la_serie.png" alt="Mr. Trance">
+                    <strong>Mr. Trance</strong>
+                </div>
+                <div class="slide">
+                    <img src="icono_pp.png" alt="Puerto Papel">
+                    <strong>Puerto Papel</strong>
+                </div>
+                <div class="slide">
+                    <img src="4drqZa8S2vG6vDHszm8spXSPeoo.webp" alt="Juaco vs Paco">
+                    <strong>Juaco vs Paco</strong>
+                </div>
+            </div>
+            <div class="carrusel-controls">
+                <button onclick="moverSlide(-1)">⬅️</button>
+                <button onclick="moverSlide(1)">➡️</button>
+            </div>
+        </section>
+    </section>
+
+    <section>
+        <h2>Más motivos para unirte</h2>
+        <ul>
+            <li>
+                <h3>Disfruta en tu TV</h3>
+                <p>Ve en Smart TVs, PlayStation, Xbox, Chromecast, Apple TV y más.</p>
+            </li>
+            <li>
+                <h3>Descarga tus series</h3>
+                <p>Guarda tus favoritas para verlas sin conexión.</p>
+            </li>
+            <li>
+                <h3>Ve donde quieras</h3>
+                <p>En tu celular, tablet, laptop y TV.</p>
+            </li>
+            <li>
+                <h3>Perfiles para niños</h3>
+                <p>Espacios seguros y divertidos para los más pequeños.</p>
+            </li>
+        </ul>
+    </section>
+
+    <button id="faqButton" onclick="toggleFAQ()">Mostrar preguntas frecuentes</button>
+
+    <section id="faq" style="display: none;">
+        <h2>Preguntas Frecuentes</h2>
+        <div>
+            <h3>¿Qué es Señal Colombia Premium?</h3>
+            <p>Es un servicio de streaming con contenido exclusivo de Señal Colombia.</p>
+        </div>
+        <div>
+            <h3>¿Cuánto cuesta?</h3>
+            <p>Desde $2000 o con cupo Brilla. Cancela cuando quieras.</p>
+        </div>
+        <div>
+            <h3>¿Dónde puedo verlo?</h3>
+            <p>En Smart TVs, consolas, celulares, tablets, y más.</p>
+        </div>
+        <div>
+            <h3>¿Puedo cancelar?</h3>
+            <p>Sí, no hay contratos a largo plazo.</p>
+        </div>
+        <div>
+            <h3>¿Qué contenido hay?</h3>
+            <p>Series, películas, infantiles y documentales de alta calidad.</p>
+        </div>
+    </section>
+
+
+<script src="java.js"></script>
+</body>
+</html>
